@@ -1,0 +1,2722 @@
+{
+  "contentType": "application/gliffy+json",
+  "version": "1.3",
+  "metadata": {
+    "title": "RKE2 Upgrade Troubleshooting Guide",
+    "revision": 0,
+    "exportBorder": false,
+    "loadPosition": "default",
+    "libraries": [
+      "com.gliffy.libraries.flowchart.flowchart_v1.default",
+      "com.gliffy.libraries.basic.basic_v1.default"
+    ],
+    "lastSerialized": 1787169958867,
+    "analyticsProduct": "Online",
+    "autosaveDisabled": false,
+    "editorVersion": null
+  },
+  "embeddedResources": {
+    "index": 0,
+    "resources": []
+  },
+  "stage": {
+    "objects": [
+      {
+        "x": 1050,
+        "y": 10,
+        "rotation": 0,
+        "id": 139,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.text",
+        "width": 700,
+        "height": 40,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 0,
+        "hidden": false,
+        "graphic": {
+          "type": "Text",
+          "Text": {
+            "tid": null,
+            "valign": "middle",
+            "overflow": "none",
+            "vposition": "none",
+            "hposition": "none",
+            "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 24px; font-weight: bold;\">RKE2 Upgrade Troubleshooting Guide</span></p>",
+            "paddingLeft": 2,
+            "paddingRight": 2,
+            "paddingBottom": 2,
+            "paddingTop": 2,
+            "outerPaddingLeft": 2,
+            "outerPaddingRight": 2,
+            "outerPaddingBottom": 2,
+            "outerPaddingTop": 2,
+            "calculatedWidth": 696,
+            "calculatedHeight": 28
+          }
+        },
+        "children": null,
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1270.0,
+        "y": 39.0,
+        "rotation": 0,
+        "id": 1,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 1,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 2,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 2,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">RKE2 Upgrade Completed</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Node/Cluster Not Healthy</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1290.0,
+        "y": 170.0,
+        "rotation": 0,
+        "id": 3,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 3,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 4,
+            "uid": null,
+            "width": 212,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 4,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Is rke2-server</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">running?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 420.0,
+        "y": 319.0,
+        "rotation": 0,
+        "id": 5,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 5,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 6,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 6,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Check cluster health</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">kubectl get nodes</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1270.0,
+        "y": 319.0,
+        "rotation": 0,
+        "id": 7,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 7,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 8,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 8,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Check service logs</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">journalctl -u rke2-server</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1290.0,
+        "y": 450.0,
+        "rotation": 0,
+        "id": 9,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 9,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 10,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 10,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Kubelet failing?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 420.0,
+        "y": 599.0,
+        "rotation": 0,
+        "id": 11,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 11,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 12,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 12,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Investigate control-plane</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">component errors</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1290.0,
+        "y": 590.0,
+        "rotation": 0,
+        "id": 13,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 13,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 14,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 14,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">cgroup-related error?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 420.0,
+        "y": 739.0,
+        "rotation": 0,
+        "id": 15,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 15,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 16,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 16,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Investigate kubelet</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">error directly</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1270.0,
+        "y": 739.0,
+        "rotation": 0,
+        "id": 17,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 17,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 18,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 18,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Check cgroup version</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">stat -fc %T /sys/fs/cgroup</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1290.0,
+        "y": 870.0,
+        "rotation": 0,
+        "id": 19,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 19,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 20,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 20,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">cgroup v2?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 520.0,
+        "y": 1019.0,
+        "rotation": 0,
+        "id": 21,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 21,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 22,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 22,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Enable unified</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">cgroup v2</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 520.0,
+        "y": 1159.0,
+        "rotation": 0,
+        "id": 23,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 23,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 24,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 24,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Reboot host</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 520.0,
+        "y": 1299.0,
+        "rotation": 0,
+        "id": 25,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 25,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 26,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 26,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Verify cgroup2fs</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1990.0,
+        "y": 1010.0,
+        "rotation": 0,
+        "id": 27,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 27,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 28,
+            "uid": null,
+            "width": 212,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 28,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">cpu.weight or</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">controller file missing?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 2270.0,
+        "y": 1159.0,
+        "rotation": 0,
+        "id": 29,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 29,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 30,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 30,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Inspect cgroup hierarchy</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">and systemd slices</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 2270.0,
+        "y": 1299.0,
+        "rotation": 0,
+        "id": 31,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 31,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 32,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 32,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Check available controllers</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">cgroup.controllers</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 2270.0,
+        "y": 1439.0,
+        "rotation": 0,
+        "id": 33,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 33,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 34,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 34,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Check enabled subtree controllers</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">cgroup.subtree_control</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 2270.0,
+        "y": 1579.0,
+        "rotation": 0,
+        "id": 35,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 35,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 36,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 36,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Verify systemd is managing</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">the unified hierarchy</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1270.0,
+        "y": 1719.0,
+        "rotation": 0,
+        "id": 37,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 37,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 38,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 38,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Restart rke2-server</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1290.0,
+        "y": 1850.0,
+        "rotation": 0,
+        "id": 39,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 39,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 40,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 40,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">RKE2 starts?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1270.0,
+        "y": 1999.0,
+        "rotation": 0,
+        "id": 41,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 41,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 42,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 42,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Check Kubernetes API</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1270.0,
+        "y": 2139.0,
+        "rotation": 0,
+        "id": 43,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 43,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 44,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 44,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">kubectl get nodes</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1290.0,
+        "y": 2270.0,
+        "rotation": 0,
+        "id": 45,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 45,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 46,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 46,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">kubectl works?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 320.0,
+        "y": 2419.0,
+        "rotation": 0,
+        "id": 47,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 47,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 48,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 48,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Test API endpoint</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">and inspect server logs</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 340.0,
+        "y": 2550.0,
+        "rotation": 0,
+        "id": 49,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 49,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 50,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 50,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Connection refused / 502?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 320.0,
+        "y": 2699.0,
+        "rotation": 0,
+        "id": 51,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 51,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 52,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 52,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">API server is not</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">fully available</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 790.0,
+        "y": 2690.0,
+        "rotation": 0,
+        "id": 53,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 53,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 54,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 54,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">401 Unauthorized?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 770.0,
+        "y": 2839.0,
+        "rotation": 0,
+        "id": 55,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 55,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 56,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 56,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">API server is reachable</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Authentication is the issue</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 770.0,
+        "y": 2979.0,
+        "rotation": 0,
+        "id": 57,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 57,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 58,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 58,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Verify kubeconfig</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">and credentials</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1120.0,
+        "y": 2839.0,
+        "rotation": 0,
+        "id": 59,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 59,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 60,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 60,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Investigate networking,</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">TLS, or API errors</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1870.0,
+        "y": 2419.0,
+        "rotation": 0,
+        "id": 61,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 61,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 62,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 62,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Check node state</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1890.0,
+        "y": 2550.0,
+        "rotation": 0,
+        "id": 63,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 63,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 64,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 64,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Node Ready?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1520.0,
+        "y": 2699.0,
+        "rotation": 0,
+        "id": 65,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 65,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 66,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 66,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">kubectl describe node</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1520.0,
+        "y": 2839.0,
+        "rotation": 0,
+        "id": 67,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 67,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 68,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 68,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Inspect kubelet / runtime</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">and node conditions</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 2240.0,
+        "y": 2690.0,
+        "rotation": 0,
+        "id": 69,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.diamond",
+        "width": 220,
+        "height": 100,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 69,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.diamond.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#BF9000",
+            "fillColor": "#FFF2CC",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 37.0,
+            "rotation": 0,
+            "id": 70,
+            "uid": null,
+            "width": 212,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 70,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Node cordoned?</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 204,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 2070.0,
+        "y": 2839.0,
+        "rotation": 0,
+        "id": 71,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 71,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#3D85C6",
+            "fillColor": "#EAF2F8",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 19.0,
+            "rotation": 0,
+            "id": 72,
+            "uid": null,
+            "width": 252,
+            "height": 36,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 72,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Uncordon node</span></p><p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">kubectl uncordon NODE</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 36
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 2220.0,
+        "y": 3019.0,
+        "rotation": 0,
+        "id": 73,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.round_rectangle",
+        "width": 260,
+        "height": 82,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 73,
+        "hidden": false,
+        "graphic": {
+          "type": "Shape",
+          "Shape": {
+            "tid": "com.gliffy.stencil.round_rectangle.basic_v1",
+            "strokeWidth": 2,
+            "strokeColor": "#38761D",
+            "fillColor": "#D9EAD3",
+            "gradient": false,
+            "dropShadow": false,
+            "state": 0,
+            "shadowX": 0,
+            "shadowY": 0,
+            "opacity": 1
+          }
+        },
+        "children": [
+          {
+            "x": 4,
+            "y": 28.0,
+            "rotation": 0,
+            "id": 74,
+            "uid": null,
+            "width": 252,
+            "height": 18,
+            "lockAspectRatio": false,
+            "lockShape": false,
+            "order": 74,
+            "hidden": false,
+            "graphic": {
+              "type": "Text",
+              "Text": {
+                "tid": null,
+                "valign": "middle",
+                "overflow": "none",
+                "vposition": "none",
+                "hposition": "none",
+                "html": "<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 14px;\">Cluster healthy</span></p>",
+                "paddingLeft": 4,
+                "paddingRight": 4,
+                "paddingBottom": 2,
+                "paddingTop": 2,
+                "outerPaddingLeft": 2,
+                "outerPaddingRight": 2,
+                "outerPaddingBottom": 2,
+                "outerPaddingTop": 2,
+                "calculatedWidth": 244,
+                "calculatedHeight": 18
+              }
+            },
+            "children": [],
+            "layerId": "rke2Troubleshooting"
+          }
+        ],
+        "layerId": "rke2Troubleshooting",
+        "linkMap": []
+      },
+      {
+        "x": 1400,
+        "y": 80,
+        "rotation": 0,
+        "id": 75,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.line",
+        "width": 1,
+        "height": 140,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 75,
+        "hidden": false,
+        "graphic": {
+          "type": "Line",
+          "Line": {
+            "strokeWidth": 2,
+            "strokeColor": "#555555",
+            "fillColor": "none",
+            "dashStyle": null,
+            "startArrow": 0,
+            "endArrow": 1,
+            "startArrowRotation": "auto",
+            "endArrowRotation": "auto",
+            "ortho": false,
+            "interpolationType": "linear",
+            "cornerRadius": 0,
+            "controlPath": [
+              [0,0],[0,140]
+            ],
+            "lockSegments": {}
+          }
+        },
+        "children": [],
+        "layerId": "rke2Troubleshooting",
+        "constraints": {
+          "constraints": [],
+          "startConstraint": {"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":1,"px":0.5,"py":1}},
+          "endConstraint": {"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":3,"px":0.5,"py":0}}
+        },
+        "linkMap": []
+      },
+      {
+        "x": 550,
+        "y": 220,
+        "rotation": 0,
+        "id": 76,
+        "uid": "com.gliffy.shape.basic.basic_v1.default.line",
+        "width": 850,
+        "height": 140,
+        "lockAspectRatio": false,
+        "lockShape": false,
+        "order": 76,
+        "hidden": false,
+        "graphic": {"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[850,0],[0,140]],"lockSegments":{}}},
+        "children": [],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":3,"px":0,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":5,"px":1,"py":0.5}}},"linkMap":[]
+      },
+      {"x":951,"y":278,"rotation":0,"id":77,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":77,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":220,"rotation":0,"id":78,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":78,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":3,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":7,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1384,"y":278,"rotation":0,"id":79,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":79,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":360,"rotation":0,"id":80,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":80,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":7,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":9,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":550,"y":500,"rotation":0,"id":81,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":850,"height":140,"lockAspectRatio":false,"lockShape":false,"order":81,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[850,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":9,"px":0,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":11,"px":1,"py":0.5}}},"linkMap":[]},
+      {"x":951,"y":558,"rotation":0,"id":82,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":82,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":500,"rotation":0,"id":83,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":83,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":9,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":13,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1384,"y":558,"rotation":0,"id":84,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":84,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":550,"y":640,"rotation":0,"id":85,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":850,"height":140,"lockAspectRatio":false,"lockShape":false,"order":85,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[850,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":13,"px":0,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":15,"px":1,"py":0.5}}},"linkMap":[]},
+      {"x":951,"y":698,"rotation":0,"id":86,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":86,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":640,"rotation":0,"id":87,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":87,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":13,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":17,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1384,"y":698,"rotation":0,"id":88,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":88,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":780,"rotation":0,"id":89,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":89,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":17,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":19,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":650,"y":920,"rotation":0,"id":90,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":750,"height":140,"lockAspectRatio":false,"lockShape":false,"order":90,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[750,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":19,"px":0,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":21,"px":1,"py":0.5}}},"linkMap":[]},
+      {"x":1001,"y":978,"rotation":0,"id":91,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":91,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":650,"y":1060,"rotation":0,"id":92,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":92,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":21,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":23,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":650,"y":1200,"rotation":0,"id":93,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":93,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":23,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":25,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":650,"y":1340,"rotation":0,"id":94,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":750,"height":420,"lockAspectRatio":false,"lockShape":false,"order":94,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[750,420]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":25,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":37,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":1400,"y":920,"rotation":0,"id":95,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":700,"height":140,"lockAspectRatio":false,"lockShape":false,"order":95,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[700,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":19,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":27,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":1726,"y":978,"rotation":0,"id":96,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":96,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":2100,"y":1060,"rotation":0,"id":97,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":300,"height":140,"lockAspectRatio":false,"lockShape":false,"order":97,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[300,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":27,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":29,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":2226,"y":1118,"rotation":0,"id":98,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":98,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":2400,"y":1200,"rotation":0,"id":99,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":99,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":29,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":31,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":2400,"y":1340,"rotation":0,"id":100,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":100,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":31,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":33,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":2400,"y":1480,"rotation":0,"id":101,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":101,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":33,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":35,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1400,"y":1620,"rotation":0,"id":102,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1000,"height":140,"lockAspectRatio":false,"lockShape":false,"order":102,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[1000,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":35,"px":0,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":37,"px":1,"py":0.5}}},"linkMap":[]},
+      {"x":1400,"y":1060,"rotation":0,"id":103,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":700,"height":700,"lockAspectRatio":false,"lockShape":false,"order":103,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[700,0],[0,700]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":27,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":37,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1726,"y":1398,"rotation":0,"id":104,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":104,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":1760,"rotation":0,"id":105,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":105,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":37,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":39,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1400,"y":360,"rotation":0,"id":106,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":1540,"lockAspectRatio":false,"lockShape":false,"order":106,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,1540],[0,0]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":39,"px":0.5,"py":0}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":7,"px":0.5,"py":1}}},"linkMap":[]},
+      {"x":1384,"y":1118,"rotation":0,"id":107,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":107,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":1900,"rotation":0,"id":108,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":108,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":39,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":41,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1384,"y":1958,"rotation":0,"id":109,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":109,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":2040,"rotation":0,"id":110,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":110,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":41,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":43,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1400,"y":2180,"rotation":0,"id":111,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":111,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":43,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":45,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":450,"y":2320,"rotation":0,"id":112,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":950,"height":140,"lockAspectRatio":false,"lockShape":false,"order":112,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[950,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":45,"px":0,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":47,"px":1,"py":0.5}}},"linkMap":[]},
+      {"x":901,"y":2378,"rotation":0,"id":113,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":113,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":450,"y":2460,"rotation":0,"id":114,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":114,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":47,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":49,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":450,"y":2600,"rotation":0,"id":115,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":115,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":49,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":51,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":434,"y":2658,"rotation":0,"id":116,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":116,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":450,"y":360,"rotation":0,"id":117,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":950,"height":2380,"lockAspectRatio":false,"lockShape":false,"order":117,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,2380],[950,0]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":51,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":7,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":450,"y":2600,"rotation":0,"id":118,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":450,"height":140,"lockAspectRatio":false,"lockShape":false,"order":118,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[450,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":49,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":53,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":651,"y":2658,"rotation":0,"id":119,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":119,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":900,"y":2740,"rotation":0,"id":120,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":120,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":53,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":55,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":884,"y":2798,"rotation":0,"id":121,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":121,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":900,"y":2880,"rotation":0,"id":122,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":122,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":55,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":57,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":900,"y":2740,"rotation":0,"id":123,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":350,"height":140,"lockAspectRatio":false,"lockShape":false,"order":123,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[350,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":53,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":59,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":1051,"y":2798,"rotation":0,"id":124,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":124,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1400,"y":2320,"rotation":0,"id":125,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":600,"height":140,"lockAspectRatio":false,"lockShape":false,"order":125,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[600,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":45,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":61,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":1676,"y":2378,"rotation":0,"id":126,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":126,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":2000,"y":2460,"rotation":0,"id":127,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":127,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":61,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":63,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":1650,"y":2600,"rotation":0,"id":128,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":350,"height":140,"lockAspectRatio":false,"lockShape":false,"order":128,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[350,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":63,"px":0,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":65,"px":1,"py":0.5}}},"linkMap":[]},
+      {"x":1801,"y":2658,"rotation":0,"id":129,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":129,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":1650,"y":2740,"rotation":0,"id":130,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":140,"lockAspectRatio":false,"lockShape":false,"order":130,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":65,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":67,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":2000,"y":2600,"rotation":0,"id":131,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":350,"height":140,"lockAspectRatio":false,"lockShape":false,"order":131,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[350,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":63,"px":1,"py":0.5}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":69,"px":0,"py":0.5}}},"linkMap":[]},
+      {"x":2151,"y":2658,"rotation":0,"id":132,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":132,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":2200,"y":2740,"rotation":0,"id":133,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":150,"height":140,"lockAspectRatio":false,"lockShape":false,"order":133,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[150,0],[0,140]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":69,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":71,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":2251,"y":2798,"rotation":0,"id":134,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":134,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">Yes</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]},
+      {"x":2200,"y":2880,"rotation":0,"id":135,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":150,"height":180,"lockAspectRatio":false,"lockShape":false,"order":135,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[150,180]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":71,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":73,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":2350,"y":2740,"rotation":0,"id":136,"uid":"com.gliffy.shape.basic.basic_v1.default.line","width":1,"height":320,"lockAspectRatio":false,"lockShape":false,"order":136,"hidden":false,"graphic":{"type":"Line","Line":{"strokeWidth":2,"strokeColor":"#555555","fillColor":"none","dashStyle":null,"startArrow":0,"endArrow":1,"startArrowRotation":"auto","endArrowRotation":"auto","ortho":false,"interpolationType":"linear","cornerRadius":0,"controlPath":[[0,0],[0,320]],"lockSegments":{}}},"children":[],"layerId":"rke2Troubleshooting","constraints":{"constraints":[],"startConstraint":{"type":"StartPositionConstraint","StartPositionConstraint":{"nodeId":69,"px":0.5,"py":1}},"endConstraint":{"type":"EndPositionConstraint","EndPositionConstraint":{"nodeId":73,"px":0.5,"py":0}}},"linkMap":[]},
+      {"x":2334,"y":2888,"rotation":0,"id":137,"uid":"com.gliffy.shape.basic.basic_v1.default.text","width":48,"height":24,"lockAspectRatio":false,"lockShape":false,"order":137,"hidden":false,"graphic":{"type":"Text","Text":{"tid":null,"valign":"middle","overflow":"none","vposition":"none","hposition":"none","html":"<p style=\"text-align: center;\"><span style=\"font-family: Arial; font-size: 12px; font-weight: bold;\">No</span></p>","paddingLeft":2,"paddingRight":2,"paddingBottom":2,"paddingTop":2,"outerPaddingLeft":2,"outerPaddingRight":2,"outerPaddingBottom":2,"outerPaddingTop":2,"calculatedWidth":44,"calculatedHeight":16}},"children":null,"layerId":"rke2Troubleshooting","linkMap":[]}
+    ],
+    "imageCache": null,
+    "background": "#FFFFFF",
+    "width": 2900,
+    "height": 3200,
+    "maxWidth": 5000,
+    "maxHeight": 5000,
+    "nodeIndex": 140,
+    "autoFit": true,
+    "exportBorder": false,
+    "gridOn": true,
+    "snapToGrid": true,
+    "drawingGuidesOn": true,
+    "pageBreaksOn": false,
+    "printGridOn": false,
+    "printPaper": null,
+    "printShrinkToFit": false,
+    "printPortrait": true,
+    "shapeStyles": {},
+    "lineStyles": {"global":{"endArrow":1,"orthoMode":0,"startArrow":0,"dashStyle":null,"strokeWidth":2,"stroke":"#555555"}},
+    "textStyles": {"global":{"bold":false,"italic":false,"face":"Arial","size":"14px","color":"#222222"}},
+    "themeData": null,
+    "viewportType": "default",
+    "layers": [{"guid":"rke2Troubleshooting","order":0,"name":"Content","active":true,"locked":false,"visible":true,"nodeIndex":140}],
+    "fitBB": {"min":{"x":300,"y":0},"max":{"x":2700,"y":3120}},
+    "printModel": {"pageSize":"a4","portrait":true,"fitToOnePage":false,"displayPageBreaks":false}
+  },
+  "editorVersion": "2.17.1"
+}
