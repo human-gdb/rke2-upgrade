@@ -93,6 +93,10 @@ Use this order to avoid chasing downstream symptoms before the underlying platfo
 
 **Host → RKE2 service → Kubelet → cgroup v2 → API server → node health → cordon state → healthy cluster**
 
+## Related Guides
+
+- [Air-gapped RKE2 upgrade guide](resources/rke2-airgapped-upgrade.md)
+
 ## Useful Commands
 
 ```bash
