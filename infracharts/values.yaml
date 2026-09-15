@@ -1,0 +1,126 @@
+opensearch:
+  enabled: true
+  clusterName: opensearch-cluster
+  nodeGroup: master
+  masterService: opensearch-cluster-master
+  replicas: 3
+
+  persistence:
+    enabled: true
+    storageClass: longhorn
+    size: 50Gi
+
+  opensearchJavaOpts: "-Xms2g -Xmx2g"
+
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 2Gi
+    limits:
+      cpu: 2
+      memory: 4Gi
+
+  # For an air-gapped deployment, set this to your mirrored image location.
+  # global:
+  #   dockerRegistry: registry.example.com/mirror
+
+  extraEnvs:
+    - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: opensearch-initial-admin
+          key: password
+
+  securityConfig:
+    enabled: true
+    config:
+      # The remaining security files supplied by the chart/image are retained.
+      dataComplete: false
+      data:
+        config.yml: |-
+          _meta:
+            type: "config"
+            config_version: 2
+
+          config:
+            dynamic:
+              authc:
+                basic_internal_auth_domain:
+                  http_enabled: true
+                  transport_enabled: true
+                  order: 0
+                  http_authenticator:
+                    type: basic
+                    challenge: false
+                  authentication_backend:
+                    type: internal
+
+                openid_auth_domain:
+                  http_enabled: true
+                  transport_enabled: true
+                  order: 1
+                  http_authenticator:
+                    type: openid
+                    challenge: false
+                    config:
+                      subject_key: preferred_username
+                      roles_key:
+                        - realm_access
+                        - roles
+                      openid_connect_url: "https://auth.example.com/realms/cynix/.well-known/openid-configuration"
+                      required_issuer: "https://auth.example.com/realms/cynix"
+                      cache_jwks_endpoint: true
+                  authentication_backend:
+                    type: noop
+
+opensearch-dashboards:
+  enabled: true
+  fullnameOverride: opensearch-dashboards
+  replicaCount: 1
+
+  opensearchHosts: "https://opensearch-cluster-master:9200"
+
+  opensearchAccount:
+    secret: opensearch-dashboards-account
+
+  extraEnvs:
+    - name: OIDC_CLIENT_SECRET
+      valueFrom:
+        secretKeyRef:
+          name: opensearch-dashboards-oidc
+          key: client-secret
+
+  config:
+    opensearch_dashboards.yml: |-
+      server.name: "opensearch-dashboards"
+      server.host: "0.0.0.0"
+      server.basePath: "/opensearch-dashboards"
+      server.rewriteBasePath: true
+
+      opensearch_security.auth.type: "openid"
+      opensearch_security.openid.connect_url: "https://auth.example.com/realms/cynix/.well-known/openid-configuration"
+      opensearch_security.openid.client_id: "opensearch-dashboards"
+      opensearch_security.openid.client_secret: "${OIDC_CLIENT_SECRET}"
+      opensearch_security.openid.scope: "openid profile email"
+      opensearch_security.openid.base_redirect_url: "https://logs.example.com/opensearch-dashboards"
+
+      opensearch.username: "${OPENSEARCH_USERNAME}"
+      opensearch.password: "${OPENSEARCH_PASSWORD}"
+      # Replace this with certificateAuthorities in production.
+      opensearch.ssl.verificationMode: "none"
+      opensearch.requestHeadersAllowlist: ["Authorization", "securitytenant"]
+      opensearch_security.cookie.secure: true
+
+  # The parent chart supplies the Ingress so the path is passed through
+  # unchanged to Dashboards when server.rewriteBasePath is enabled.
+  ingress:
+    enabled: false
+
+ingress:
+  enabled: true
+  className: nginx
+  host: logs.example.com
+  path: /opensearch-dashboards
+  tls:
+    enabled: true
+    secretName: logs-example-tls

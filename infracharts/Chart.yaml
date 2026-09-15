@@ -1,0 +1,16 @@
+apiVersion: v2
+name: infracharts
+description: OpenSearch and OpenSearch Dashboards infrastructure chart
+type: application
+version: 0.1.0
+appVersion: "3.8.0"
+
+dependencies:
+  - name: opensearch
+    version: 3.8.0
+    repository: https://opensearch-project.github.io/helm-charts/
+    condition: opensearch.enabled
+  - name: opensearch-dashboards
+    version: 3.8.0
+    repository: https://opensearch-project.github.io/helm-charts/
+    condition: opensearch-dashboards.enabled
