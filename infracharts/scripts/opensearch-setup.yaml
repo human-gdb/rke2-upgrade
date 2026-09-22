@@ -1,0 +1,33 @@
+# Applied in order by the OpenSearch bootstrap Job.
+operations:
+  - method: PUT
+    path: /_ingest/pipeline/container-logs
+    body:
+      description: Add the OpenSearch ingest timestamp
+      processors:
+        - set:
+            field: event.ingested
+            value: "{{{_ingest.timestamp}}}"
+  - method: PUT
+    path: /_index_template/container-logs
+    body:
+      index_patterns:
+        - container-logs-*
+      priority: 100
+      template:
+        settings:
+          number_of_shards: 1
+          number_of_replicas: 1
+          default_pipeline: container-logs
+        mappings:
+          properties:
+            "@timestamp":
+              type: date
+            event.ingested:
+              type: date
+            kubernetes.namespace_name:
+              type: keyword
+            kubernetes.pod_name:
+              type: keyword
+            kubernetes.container_name:
+              type: keyword

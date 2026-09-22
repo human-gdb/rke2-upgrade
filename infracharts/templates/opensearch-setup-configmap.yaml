@@ -1,5 +1,12 @@
 {{- if .Values.opensearchSetup.enabled }}
 {{- $savedObjects := .Files.Get .Values.opensearchSetup.savedObjectsFile }}
+{{- $setup := .Files.Get "scripts/opensearch-setup.yaml" | required "scripts/opensearch-setup.yaml is required" | fromYaml }}
+{{- if hasKey $setup "Error" }}
+{{- fail (printf "Invalid scripts/opensearch-setup.yaml: %s" $setup.Error) }}
+{{- end }}
+{{- if not (kindIs "slice" $setup.operations) }}
+{{- fail "scripts/opensearch-setup.yaml must contain an operations list (use [] for no operations)" }}
+{{- end }}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -10,7 +17,7 @@ data:
   opensearch_bootstrap.py: |-
 {{ .Files.Get "scripts/opensearch_bootstrap.py" | nindent 4 }}
   opensearch-setup.json: |-
-{{ .Values.opensearchSetup.operations | toPrettyJson | nindent 4 }}
+{{ $setup.operations | toPrettyJson | nindent 4 }}
   {{ if $savedObjects }}
   saved-objects.ndjson: |-
 {{ $savedObjects | nindent 4 }}

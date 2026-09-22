@@ -17,6 +17,7 @@ from pathlib import Path
 
 
 def env(name: str, default: str | None = None, *, required: bool = False) -> str:
+    """Read an environment setting and enforce required values."""
     value = os.getenv(name, default)
     if required and not value:
         raise RuntimeError(f"Missing required environment variable: {name}")
@@ -24,10 +25,12 @@ def env(name: str, default: str | None = None, *, required: bool = False) -> str
 
 
 def as_bool(value: str) -> bool:
+    """Interpret common boolean environment values."""
     return value.strip().lower() in {"1", "true", "yes", "on"}
 
 
 def ssl_context() -> ssl.SSLContext:
+    """Configure TLS verification and optional CA trust."""
     if not as_bool(env("VERIFY_TLS", "true")):
         return ssl._create_unverified_context()  # noqa: SLF001
     ca_cert = env("CA_CERT")
@@ -38,6 +41,7 @@ SSL_CONTEXT = ssl_context()
 
 
 def auth_header(username: str, password: str) -> str:
+    """Build the HTTP Basic authentication header."""
     token = base64.b64encode(f"{username}:{password}".encode()).decode()
     return f"Basic {token}"
 
@@ -53,6 +57,7 @@ def request(
     headers: dict[str, str] | None = None,
     timeout: float = 30,
 ) -> tuple[int, bytes]:
+    """Send an authenticated API request and return its response."""
     url = f"{base_url.rstrip('/')}/{path.lstrip('/')}"
     request_headers = {
         "Accept": "application/json",
@@ -78,6 +83,7 @@ def wait_until_ready(
     deadline: float,
     headers: dict[str, str] | None = None,
 ) -> None:
+    """Wait for a service to respond successfully before the deadline."""
     last_result = "not contacted"
     while time.monotonic() < deadline:
         try:
@@ -102,6 +108,7 @@ def wait_until_ready(
 def apply_setup(
     setup_file: Path, base_url: str, username: str, password: str
 ) -> None:
+    """Apply the ordered setup operations rendered by Helm from YAML."""
     if not setup_file.exists():
         print(f"No setup file at {setup_file}; skipping cluster resources")
         return
@@ -137,6 +144,7 @@ def apply_setup(
 
 
 def multipart_file(field: str, filename: str, content: bytes) -> tuple[bytes, str]:
+    """Package a saved-object export for multipart upload."""
     boundary = "----opensearch-bootstrap-" + "".join(
         random.choice(string.ascii_letters + string.digits) for _ in range(24)
     )
@@ -163,6 +171,7 @@ def import_saved_objects(
     password: str,
     tenant: str,
 ) -> None:
+    """Import saved objects into the selected Dashboards tenant."""
     if not objects_file.exists():
         print(f"No saved objects file at {objects_file}; skipping import")
         return
@@ -196,6 +205,7 @@ def import_saved_objects(
 
 
 def main() -> int:
+    """Coordinate service readiness, cluster setup, and saved-object import."""
     opensearch_url = env("OPENSEARCH_URL", required=True)
     dashboards_url = env("DASHBOARDS_URL", required=True)
     os_user = env("OPENSEARCH_USERNAME", required=True)

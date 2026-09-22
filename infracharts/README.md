@@ -40,8 +40,14 @@ The NGINX Ingress intentionally does not use `rewrite-target`; it forwards `/ope
 When `opensearchSetup.enabled` is true, Helm creates a ConfigMap containing
 `scripts/opensearch_bootstrap.py` through `.Files.Get` and runs it as a
 post-install/post-upgrade hook Job. The Job waits for OpenSearch, applies the
-operations in `opensearchSetup.operations`, waits for Dashboards, and imports
+operations in `scripts/opensearch-setup.yaml`, waits for Dashboards, and imports
 saved objects when an export file is packaged with the chart.
+
+Edit the `operations` list in `scripts/opensearch-setup.yaml` to configure the
+REST requests. Helm reads this file with `.Files.Get`, parses the YAML, and
+mounts the operations as `opensearch-setup.json` for the Python script. This
+keeps the runtime dependency-free for air-gapped deployments. Set
+`operations: []` to skip cluster changes.
 
 Create the bootstrap credentials before installing the chart:
 
