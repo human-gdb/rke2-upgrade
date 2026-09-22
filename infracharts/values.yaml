@@ -97,7 +97,11 @@ opensearch-dashboards:
       server.basePath: "/opensearch-dashboards"
       server.rewriteBasePath: true
 
-      opensearch_security.auth.type: "openid"
+      # Keep OIDC as the normal browser flow while allowing the bootstrap Job
+      # to call the Dashboards saved-objects API with basic authentication.
+      opensearch_security.auth.type: ["basicauth", "openid"]
+      opensearch_security.auth.multiple_auth_enabled: true
+      opensearch_security.auth.default_redirect_auth_type: "openid"
       opensearch_security.openid.connect_url: "https://auth.example.com/realms/cynix/.well-known/openid-configuration"
       opensearch_security.openid.client_id: "opensearch-dashboards"
       opensearch_security.openid.client_secret: "${OIDC_CLIENT_SECRET}"
@@ -124,3 +128,77 @@ ingress:
   tls:
     enabled: true
     secretName: logs-example-tls
+
+opensearchSetup:
+  enabled: true
+
+  image:
+    # Mirror this image into the air-gapped registry and override the repository.
+    repository: python
+    tag: 3.12-alpine
+    pullPolicy: IfNotPresent
+
+  opensearchUrl: https://opensearch-cluster-master:9200
+  dashboardsUrl: https://opensearch-dashboards:5601/opensearch-dashboards
+
+  authSecret:
+    name: opensearch-bootstrap-auth
+    usernameKey: username
+    passwordKey: password
+
+  # Leave name empty to reuse authSecret for Dashboards.
+  dashboardsAuthSecret:
+    name: ""
+    usernameKey: username
+    passwordKey: password
+
+  dashboardsTenant: global
+  importOverwrite: true
+  waitTimeoutSeconds: 300
+
+  tls:
+    # The bundled chart currently uses self-signed transport certificates.
+    # Set verify to true and provide caSecretName in production.
+    verify: false
+    # When set, this Secret must contain the key configured by caKey.
+    caSecretName: ""
+    caKey: ca.crt
+
+  # The file is optional. When included in the chart, it must be an NDJSON
+  # export from OpenSearch Dashboards with referenced objects included.
+  savedObjectsFile: saved-objects/saved-objects.ndjson
+
+  backoffLimit: 3
+
+  operations:
+    - method: PUT
+      path: /_ingest/pipeline/container-logs
+      body:
+        description: Add the OpenSearch ingest timestamp
+        processors:
+          - set:
+              field: event.ingested
+              value: "{{{_ingest.timestamp}}}"
+    - method: PUT
+      path: /_index_template/container-logs
+      body:
+        index_patterns:
+          - container-logs-*
+        priority: 100
+        template:
+          settings:
+            number_of_shards: 1
+            number_of_replicas: 1
+            default_pipeline: container-logs
+          mappings:
+            properties:
+              "@timestamp":
+                type: date
+              event.ingested:
+                type: date
+              kubernetes.namespace_name:
+                type: keyword
+              kubernetes.pod_name:
+                type: keyword
+              kubernetes.container_name:
+                type: keyword

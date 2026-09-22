@@ -1,0 +1,88 @@
+{{- if .Values.opensearchSetup.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "infracharts.opensearchSetupName" . }}
+  labels:
+    {{- include "infracharts.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": post-install,post-upgrade
+    "helm.sh/hook-weight": "10"
+    "helm.sh/hook-delete-policy": before-hook-creation
+spec:
+  backoffLimit: {{ .Values.opensearchSetup.backoffLimit }}
+  template:
+    metadata:
+      labels:
+        {{- include "infracharts.labels" . | nindent 8 }}
+        app.kubernetes.io/component: opensearch-setup
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: opensearch-setup
+          image: "{{ .Values.opensearchSetup.image.repository }}:{{ .Values.opensearchSetup.image.tag }}"
+          imagePullPolicy: {{ .Values.opensearchSetup.image.pullPolicy }}
+          command:
+            - python3
+            - /opt/opensearch-setup/opensearch_bootstrap.py
+          env:
+            - name: OPENSEARCH_URL
+              value: {{ .Values.opensearchSetup.opensearchUrl | quote }}
+            - name: DASHBOARDS_URL
+              value: {{ .Values.opensearchSetup.dashboardsUrl | quote }}
+            - name: OPENSEARCH_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.opensearchSetup.authSecret.name | quote }}
+                  key: {{ .Values.opensearchSetup.authSecret.usernameKey | quote }}
+            - name: OPENSEARCH_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.opensearchSetup.authSecret.name | quote }}
+                  key: {{ .Values.opensearchSetup.authSecret.passwordKey | quote }}
+            {{- if .Values.opensearchSetup.dashboardsAuthSecret.name }}
+            - name: DASHBOARDS_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.opensearchSetup.dashboardsAuthSecret.name | quote }}
+                  key: {{ .Values.opensearchSetup.dashboardsAuthSecret.usernameKey | quote }}
+            - name: DASHBOARDS_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.opensearchSetup.dashboardsAuthSecret.name | quote }}
+                  key: {{ .Values.opensearchSetup.dashboardsAuthSecret.passwordKey | quote }}
+            {{- end }}
+            - name: DASHBOARDS_TENANT
+              value: {{ .Values.opensearchSetup.dashboardsTenant | quote }}
+            - name: IMPORT_OVERWRITE
+              value: {{ .Values.opensearchSetup.importOverwrite | quote }}
+            - name: WAIT_TIMEOUT_SECONDS
+              value: {{ .Values.opensearchSetup.waitTimeoutSeconds | quote }}
+            - name: VERIFY_TLS
+              value: {{ .Values.opensearchSetup.tls.verify | quote }}
+            {{- if .Values.opensearchSetup.tls.caSecretName }}
+            - name: CA_CERT
+              value: /opt/opensearch-ca/{{ .Values.opensearchSetup.tls.caKey }}
+            {{- end }}
+          volumeMounts:
+            - name: setup
+              mountPath: /opt/opensearch-setup
+              readOnly: true
+            {{- if .Values.opensearchSetup.tls.caSecretName }}
+            - name: ca
+              mountPath: /opt/opensearch-ca
+              readOnly: true
+            {{- end }}
+      volumes:
+        - name: setup
+          configMap:
+            name: {{ include "infracharts.opensearchSetupName" . }}
+        {{- if .Values.opensearchSetup.tls.caSecretName }}
+        - name: ca
+          secret:
+            secretName: {{ .Values.opensearchSetup.tls.caSecretName | quote }}
+            items:
+              - key: {{ .Values.opensearchSetup.tls.caKey | quote }}
+                path: {{ .Values.opensearchSetup.tls.caKey | quote }}
+        {{- end }}
+{{- end }}

@@ -1,0 +1,18 @@
+{{- if .Values.opensearchSetup.enabled }}
+{{- $savedObjects := .Files.Get .Values.opensearchSetup.savedObjectsFile }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "infracharts.opensearchSetupName" . }}
+  labels:
+    {{- include "infracharts.labels" . | nindent 4 }}
+data:
+  opensearch_bootstrap.py: |-
+{{ .Files.Get "scripts/opensearch_bootstrap.py" | nindent 4 }}
+  opensearch-setup.json: |-
+{{ .Values.opensearchSetup.operations | toPrettyJson | nindent 4 }}
+  {{ if $savedObjects }}
+  saved-objects.ndjson: |-
+{{ $savedObjects | nindent 4 }}
+  {{- end }}
+{{- end }}

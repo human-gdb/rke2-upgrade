@@ -16,3 +16,7 @@ app.kubernetes.io/name: {{ include "infracharts.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
+
+{{- define "infracharts.opensearchSetupName" -}}
+{{- printf "%s-opensearch-setup" (include "infracharts.fullname" .) | trunc 63 | trimSuffix "-" }}
+{{- end }}
