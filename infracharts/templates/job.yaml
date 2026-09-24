@@ -1,0 +1,58 @@
+{{- $names := dict }}
+{{- range $key, $config := (.Values.jobs | default dict) }}
+{{- $job := $config | default dict }}
+{{- if eq (dig "run" false $job) true }}
+{{- $name := $key | kebabcase }}
+{{- if or (gt (len $name) 63) (not (regexMatch "^[a-z0-9]([-a-z0-9]*[a-z0-9])?$" $name)) }}
+{{- fail (printf "jobs.%s must produce a valid Kubernetes name of at most 63 characters" $key) }}
+{{- end }}
+{{- if hasKey $names $name }}
+{{- fail (printf "jobs.%s produces duplicate Job name %s" $key $name) }}
+{{- end }}
+{{- $_ := set $names $name true }}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ $name | quote }}
+  namespace: {{ $.Release.Namespace }}
+  labels:
+    {{- include "infracharts.labels" $ | nindent 4 }}
+spec:
+  backoffLimit: {{ dig "backoffLimit" 2 $job }}
+  template:
+    metadata:
+      labels:
+        {{- include "infracharts.labels" $ | nindent 8 }}
+        app.kubernetes.io/component: job-runner
+    spec:
+      restartPolicy: Never
+      {{- with $job.serviceAccountName }}
+      serviceAccountName: {{ . | quote }}
+      {{- end }}
+      {{- with $job.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: runner
+          image: {{ required (printf "jobs.%s.image is required" $key) $job.image | quote }}
+          imagePullPolicy: {{ $job.imagePullPolicy | default "IfNotPresent" | quote }}
+          command:
+            {{- required (printf "jobs.%s.command is required" $key) $job.command | toYaml | nindent 12 }}
+          args:
+            {{- required (printf "jobs.%s.args is required" $key) $job.args | toYaml | nindent 12 }}
+          {{- with $job.envFrom }}
+          envFrom:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with $job.env }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with $job.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+{{- end }}
+{{- end }}
